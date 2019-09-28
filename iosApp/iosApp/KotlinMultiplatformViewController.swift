@@ -40,8 +40,6 @@ class KotlinMultiplatformViewController: UIViewController, UICollectionViewDataS
         let cell = movieCollectionView.dequeueReusableCell(withReuseIdentifier: "movieCell", for: indexPath) as! KotlinMultiplatformTableViewCell
         
         cell.labelCell.text = movieList[indexPath.row].title
-        //cell.imageCell.image = UIImage(named: movieList[indexPath.row].poster_path)
-        //loadMovieImage(path: self.movieList[indexPath.row].poster_path, imageView: cell.imageCell)
         
         let stringUrl = "https://image.tmdb.org/t/p/w185/\(self.movieList[indexPath.row].poster_path)"
         let url = URL(string: stringUrl)
