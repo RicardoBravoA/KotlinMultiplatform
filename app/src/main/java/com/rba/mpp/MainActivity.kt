@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity(), CoroutineScope {
 
         movieApi = MovieApi()
 
-        setupRecyclerView()
+        rvData.adapter = movieAdapter
 
         loadList()
     }
@@ -43,10 +43,6 @@ class MainActivity : AppCompatActivity(), CoroutineScope {
             },
             failure = ::handleError
         )
-    }
-
-    private fun setupRecyclerView() {
-        rvData.adapter = movieAdapter
     }
 
     fun onClickMovie(movie: MovieItemResponse) {
